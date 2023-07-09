@@ -14,7 +14,7 @@ import { v4 as uuidv4 } from "uuid";
 
 import dynamic from "next/dynamic";
 // import ReactHtmlParser from "react-html-parser";
-import parse from 'html-react-parser';
+import HtmlParser from "html-react-parser";
 
 import { EditorState } from "draft-js";
 const Editor = dynamic(
@@ -361,7 +361,7 @@ export default function Page() {
           className="prose w-[90%] mx-auto mt-6"
           // dangerouslySetInnerHTML={createMarkup(convertedContent)}
         >
-          {parse(convertedContent)}
+          {HtmlParser(convertedContent)}
         </div>
         <button class="my-2 p-3 w-fit flex px-16 justify-center items-center mx-auto bg-[#ffd82f]">
           Save and continue
