@@ -13,7 +13,7 @@ import {
   deleteObject,
 } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
-import ReactHtmlParser from "react-html-parser";
+// import ReactHtmlParser from "react-html-parser";
 
 import dynamic from "next/dynamic";
 
@@ -367,9 +367,9 @@ export default function Page() {
         </div>
         <div
           className="prose w-[90%] mx-auto mt-6"
-          // dangerouslySetInnerHTML={createMarkup(convertedContent)}
+          dangerouslySetInnerHTML={createMarkup(convertedContent)}
         >
-          {ReactHtmlParser(convertedContent)}
+          {/* {ReactHtmlParser(convertedContent)} */}
         </div>
         <button class="my-2 p-3 w-fit flex px-16 justify-center items-center mx-auto bg-[#ffd82f]">
           Update and Save
